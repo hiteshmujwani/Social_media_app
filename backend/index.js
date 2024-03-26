@@ -20,7 +20,7 @@ app.use(
 );
 
 //routes
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.send("Hello from server side");
 });
 
