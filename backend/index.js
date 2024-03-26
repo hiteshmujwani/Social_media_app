@@ -8,9 +8,16 @@ dotenv.config();
 const app = express();
 
 //middleware
-app.use(cors());
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(
+  cors({
+    origin: "*",
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 //routes
 app.get("/", (req, res) => {
