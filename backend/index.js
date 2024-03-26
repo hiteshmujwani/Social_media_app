@@ -23,6 +23,9 @@ app.use(
 app.get("/home", (req, res) => {
   res.send("Hello from server side");
 });
+app.get("/", (req, res) => {
+  res.send("lund");
+});
 
 app.listen(
   process.env.PORT,
